@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Arimo, Heebo } from "next/font/google";
+import { Lunasima } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const arimo = Arimo({
-  variable: "--font-arimo",
-  subsets: ["latin"],
+const birzia = localFont({
+  src: "../public/fonts/Birzia.woff",
+  variable: "--font-birzia",
+  display: "swap",
 });
 
-const heebo = Heebo({
-  variable: "--font-heebo",
+const lunasima = Lunasima({
+  weight: ["400", "700"],
+  variable: "--font-lunasima",
   subsets: ["latin"],
 });
 
@@ -40,7 +43,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${arimo.variable} ${heebo.variable} antialiased`}>
+      <body className={`${birzia.variable} ${lunasima.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

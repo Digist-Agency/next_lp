@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import AccessibilityWidgetClient from "@/components/sections/AccessibilityWidgetClient";
 import { HeroSection } from "@/components/sections/hero";
 import dynamic from "next/dynamic";
@@ -62,6 +63,7 @@ export default function Home() {
         <SuccessStory />
         <OurTeachers />
         <AnswersQuestions />
+        <Footer />
       </main>
       <AccessibilityWidgetClient />
     </>

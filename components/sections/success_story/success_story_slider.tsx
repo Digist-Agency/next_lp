@@ -15,7 +15,7 @@ import { GoldButton } from "@/components/shared/gold_button";
 const successStoriesData = [
   {
     id: 1,
-    image: "/images/success_story/tel.webp",
+    image: "/images/success_story/tel1.webp",
     owner: {
       icon: "/icons/success_story/avatar.svg",
       title: "דנה לוי",
@@ -47,7 +47,7 @@ const successStoriesData = [
   },
   {
     id: 2,
-    image: "/images/success_story/tel.webp",
+    image: "/images/success_story/tel2.webp",
     owner: {
       icon: "/icons/success_story/avatar.svg",
       title: "אלכס גורביץ'",
