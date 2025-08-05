@@ -19,7 +19,7 @@ import {
 // Простая функция для преобразования YouTube URL в embed формат
 function getEmbedUrl(youtubeUrl: string): string {
   const videoId = youtubeUrl.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|&v=))([^#&?]*)/
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|&v=|shorts\/))([^#&?]*)/
   )?.[1];
   return videoId
     ? `https://www.youtube.com/embed/${videoId}?rel=0&showinfo=0&modestbranding=1`
@@ -29,31 +29,28 @@ function getEmbedUrl(youtubeUrl: string): string {
 const videoData = [
   {
     id: 1,
-    title: "סיפור הצלחה - מרים כהן",
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnailUrl: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    description: "איך השתלבתי בעבודה חדשה תוך 3 חודשים",
+    youtubeUrl: "https://www.youtube.com/shorts/te6yUWP3GyU",
+    thumbnailUrl: "https://img.youtube.com/vi/te6yUWP3GyU/hqdefault.jpg",
   },
   {
     id: 2,
-    title: "מחשב שכר - דוד לוי",
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnailUrl: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    description: "מעבודה פיזית לקריירה במשרד",
+    youtubeUrl: "https://www.youtube.com/shorts/Vj-SPQnszSg",
+    thumbnailUrl: "https://img.youtube.com/vi/Vj-SPQnszSg/hqdefault.jpg",
   },
   {
     id: 3,
-    title: "הכשרה מקצועית - שרה אברהם",
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnailUrl: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    description: "התחלה חדשה בגיל 40",
+    youtubeUrl: "https://www.youtube.com/shorts/T41_wFaWyxM",
+    thumbnailUrl: "https://img.youtube.com/vi/T41_wFaWyxM/hqdefault.jpg",
   },
   {
     id: 4,
-    title: "הצלחה בעסקים - יוסי זוהר",
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnailUrl: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    description: "פתיחת עסק עצמאי אחרי הקורס",
+    youtubeUrl: "https://www.youtube.com/shorts/oJ9bGHcywps",
+    thumbnailUrl: "https://img.youtube.com/vi/oJ9bGHcywps/hqdefault.jpg",
+  },
+  {
+    id: 5,
+    youtubeUrl: "https://www.youtube.com/shorts/u3m5BlHc9YM",
+    thumbnailUrl: "https://img.youtube.com/vi/u3m5BlHc9YM/hqdefault.jpg",
   },
 ];
 
@@ -112,7 +109,7 @@ export function VideoSlider() {
                         <iframe
                           className="w-full h-full"
                           src={getEmbedUrl(video.youtubeUrl)}
-                          title={video.title}
+                          title={video.id.toString()}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -132,28 +129,17 @@ export function VideoSlider() {
                                 <polygon points="5,3 19,12 5,21" />
                               </svg>
                             </div>
-                            <h3 className="text-white text-sm font-bold mb-1">
-                              {video.title}
-                            </h3>
+
                             <p className="text-gray-300 text-xs">
                               Нажмите для просмотра
                             </p>
                           </div>
                         </div>
                       )}
-
-                      <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-lg">
-                        <h3 className="text-white text-sm font-bold mb-1">
-                          {video.title}
-                        </h3>
-                        <p className="text-gray-200 text-xs">
-                          {video.description}
-                        </p>
-                      </div>
                     </div>
 
                     {/* Десктоп - слайд в телефоне */}
-                    <div className="hidden lg:block relative w-[480px] h-[850px] mx-auto z-30">
+                    <div className="hidden lg:block relative w-[480px] h-[850px] mx-auto z-30 ">
                       {/* Картинка телефона */}
                       <Image
                         src="/images/video_reviews/phone.png"
@@ -169,7 +155,7 @@ export function VideoSlider() {
                           <iframe
                             className="w-full h-full"
                             src={getEmbedUrl(video.youtubeUrl)}
-                            title={video.title}
+                            title={video.id.toString()}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
@@ -189,9 +175,6 @@ export function VideoSlider() {
                                   <polygon points="5,3 19,12 5,21" />
                                 </svg>
                               </div>
-                              <h3 className="text-white text-sm font-bold mb-1">
-                                {video.title}
-                              </h3>
                               <p className="text-gray-300 text-xs">
                                 Нажмите для просмотра
                               </p>
@@ -201,11 +184,8 @@ export function VideoSlider() {
 
                         {/* Overlay с информацией для десктопа */}
                         <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-lg">
-                          <h3 className="text-white text-sm font-bold mb-1">
-                            {video.title}
-                          </h3>
                           <p className="text-gray-200 text-xs">
-                            {video.description}
+                            {video.id.toString()}
                           </p>
                         </div>
                       </div>
@@ -252,7 +232,7 @@ export function VideoSlider() {
                   <div className="hidden lg:block w-full h-full">
                     <Image
                       src={video.thumbnailUrl}
-                      alt={video.title}
+                      alt={video.id.toString()}
                       fill
                       className="object-cover"
                     />

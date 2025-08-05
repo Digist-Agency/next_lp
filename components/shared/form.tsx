@@ -144,7 +144,10 @@ export function Form() {
             checked={formData.agreedToTerms}
             onChange={handleInputChange}
             required
-            className="w-4 h-4 appearance-none border-2 border-black bg-white checked:bg-yellow-400 checked:border-black focus:outline-none"
+            className="w-4 h-4 appearance-none border-2 border-black bg-white 
+  checked:bg-yellow-400 checked:border-black focus:outline-none
+  checked:before:content-['✓'] checked:before:block checked:before:text-black 
+  checked:before:text-[14px] checked:before:leading-4 checked:before:text-center"
           />
           בהרשמתך הינך מסכימ/ה עם מדיניות הפרטיות של האתר
         </label>
@@ -172,7 +175,10 @@ export function Form() {
             checked={formData.agreedToTerms}
             onChange={handleInputChange}
             required
-            className="w-4 h-4 appearance-none border-2 border-black bg-white checked:bg-yellow-400 checked:border-black focus:outline-none"
+            className="w-4 h-4 appearance-none border-2 border-black bg-white 
+  checked:bg-yellow-400 checked:border-black focus:outline-none
+  checked:before:content-['✓'] checked:before:block checked:before:text-black 
+  checked:before:text-[14px] checked:before:leading-4 checked:before:text-center"
           />
           בהרשמתך הינך מסכימ/ה עם מדיניות הפרטיות של האתר
         </label>
