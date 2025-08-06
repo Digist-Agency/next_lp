@@ -181,7 +181,9 @@ export function SuccessStorySlider() {
                       alt="icon"
                       width={200}
                       height={700}
-                      className="lg:w-[auto] lg:h-[700px] object-cover"
+                      priority
+                      className="lg:w-auto lg:h-auto object-cover"
+                      style={{ maxHeight: "700px" }}
                     />
                   </div>
                 </div>

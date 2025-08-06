@@ -145,6 +145,7 @@ export function VideoSlider() {
                         src="/images/video_reviews/phone.png"
                         alt="phone"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 480px"
                         className="object-contain z-10"
                       />
 
@@ -229,11 +230,12 @@ export function VideoSlider() {
                   <div className="lg:hidden w-full h-full bg-black " />
 
                   {/* Десктопная версия - превью */}
-                  <div className="hidden lg:block w-full h-full">
+                  <div className="hidden lg:block w-full h-full relative">
                     <Image
                       src={video.thumbnailUrl}
                       alt={video.id.toString()}
                       fill
+                      sizes="(max-width: 1024px) 20px, 75px"
                       className="object-cover"
                     />
 

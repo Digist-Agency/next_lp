@@ -14,6 +14,7 @@ export function Rating() {
             alt="rating"
             width={170}
             height={100}
+            className="h-auto w-auto"
           />
         </div>
       </div>
@@ -22,6 +23,7 @@ export function Rating() {
         alt="avatars"
         width={140}
         height={100}
+        className="h-auto w-auto"
       />
     </div>
   );

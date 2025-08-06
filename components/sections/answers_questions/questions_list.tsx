@@ -54,7 +54,8 @@ export function QuestionsList() {
                 alt="question mark"
                 width={24}
                 height={24}
-                className="w-[24px] h-[auto] lg:w-[32px] lg:h-[auto]"
+                className="w-auto h-auto"
+                style={{ width: "24px", maxWidth: "32px" }}
               />
               <h2 className="text-[18px] font-heebo  lg:text-[24px] font-semibold text-black text-right flex-1 mx-4">
                 {item.question}
@@ -65,14 +66,16 @@ export function QuestionsList() {
                   alt="arrow"
                   width={17}
                   height={17}
-                  className="group-data-[state=open]:hidden transition-all w-[12px] h-[auto] lg:w-[17px] lg:h-[auto]"
+                  className="group-data-[state=open]:hidden transition-all w-auto h-auto"
+                  style={{ width: "12px", maxWidth: "17px" }}
                 />
                 <Image
                   src="/icons/answers_qeustions/arrow_up.svg"
                   alt="arrow"
                   width={17}
                   height={17}
-                  className="hidden group-data-[state=open]:block transition-all"
+                  className="hidden group-data-[state=open]:block transition-all w-auto h-auto"
+                  style={{ width: "12px", maxWidth: "17px" }}
                 />
               </div>
             </div>

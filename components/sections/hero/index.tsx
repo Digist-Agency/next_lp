@@ -27,7 +27,13 @@ export function HeroSection() {
           width={500}
           height={100}
           priority
-          className="w-[200px] h-[55px]  md:w-[350px] md:h-[100px] lg:w-[500px] lg:h-[100px]"
+          className="w-auto h-auto"
+          style={{
+            width: "200px",
+            height: "55px",
+            maxWidth: "500px",
+            maxHeight: "100px",
+          }}
         />
 
         <div className="flex gap-2 lg:gap-6  flex-col-reverse items-center lg:flex-row-reverse lg:justify-between lg:items-center">

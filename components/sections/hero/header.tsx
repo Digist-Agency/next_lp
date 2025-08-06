@@ -16,7 +16,7 @@ export function Header() {
         alt="logo"
         width={300}
         height={100}
-        className="w-[200px] h-[auto] md:w-[300px] md:h-[auto]"
+        className="w-[200px] h-auto md:w-[300px] md:h-[100px]"
       />
     </div>
   );
