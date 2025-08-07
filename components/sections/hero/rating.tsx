@@ -14,6 +14,7 @@ export function Rating() {
             alt="rating"
             width={170}
             height={100}
+            priority
             className="h-auto w-auto"
           />
         </div>
@@ -23,6 +24,7 @@ export function Rating() {
         alt="avatars"
         width={140}
         height={100}
+        priority
         className="h-auto w-auto"
       />
     </div>
