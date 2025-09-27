@@ -52,7 +52,7 @@ export function TextContent() {
 
   return (
     <div className="flex flex-col items-center lg:items-start justify-start gap-4 lg:gap-10  pb-8 lg:pb-20">
-      <p className="text-[16px] lg:text-[20px]  text-black mb-2">
+      <p className="text-[16px] lg:text-[18px]  text-black mb-2">
         תלמדו איך להפוך למנהלי חשבונות וחשבי שכר שמבוקשים בשוק —
         <br />
         דרך שיעורים ממוקדים, תרגול מעשי וליווי אישי צמוד לאורך כל הדרך.
@@ -72,7 +72,7 @@ export function TextContent() {
               height={56}
               className="w-[48px] h-[48px] lg:w-[56px] lg:h-[56px]"
             />
-            <p className="text-[16px] lg:text-[24px] font-bold text-black mb-2 text-center lg:text-right">
+            <p className="text-[16px] lg:text-[20px] font-bold text-black mb-2 text-center lg:text-right">
               {item.title}
             </p>
           </div>

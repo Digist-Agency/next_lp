@@ -57,7 +57,7 @@ export function QuestionsList() {
                 className="w-auto h-auto"
                 style={{ width: "24px", maxWidth: "32px" }}
               />
-              <h2 className="text-[18px] font-heebo  lg:text-[24px] font-semibold text-black text-right flex-1 mx-4">
+              <h2 className="text-[18px] font-heebo  lg:text-[20px] font-semibold text-black text-right flex-1 mx-4">
                 {item.question}
               </h2>
               <div className="flex items-center gap-3">
@@ -81,7 +81,7 @@ export function QuestionsList() {
             </div>
           </AccordionTrigger>
           <AccordionContent className="px-4 lg:px-6 pb-4 bg-gray-100">
-            <p className="text-[16px] lg:text-[20px] text-black text-right leading-relaxed pr-10">
+            <p className="text-[16px] lg:text-[18px] text-black text-right leading-relaxed pr-10">
               {item.answer}
             </p>
           </AccordionContent>

@@ -146,7 +146,7 @@ export function TeachersSlider() {
                             height={20}
                           />
                         </div>
-                        <p className="text-[16px] md:text-[20px] lg:text-[20px] text-white leading-relaxed">
+                        <p className="text-[16px] md:text-[20px] lg:text-[18px] text-white leading-relaxed">
                           {teacher.sticker.description}
                         </p>
                       </div>
@@ -162,11 +162,11 @@ export function TeachersSlider() {
                     </h1>
                   </div>
 
-                  <div className="text-[16px] md:text-[20px] lg:text-[20px] line-clamp-[28px] text-white leading-relaxed">
+                  <div className="text-[16px] md:text-[20px] lg:text-[18px] line-clamp-[28px] text-white leading-relaxed">
                     {teacher.description}
                   </div>
 
-                  <p className="text-[16px] md:text-[20px] lg:text-[20px] line-clamp-[28px] text-white leading-relaxed">
+                  <p className="text-[16px] md:text-[20px] lg:text-[18px] line-clamp-[28px] text-white leading-relaxed">
                     {teacher.fullDescription}
                   </p>
 
