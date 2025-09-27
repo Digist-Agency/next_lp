@@ -1,7 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoldButton } from "./gold_button";
+
+declare global {
+  interface Window {
+    dataLayer?: Array<Record<string, unknown>>;
+  }
+}
+
+type UTMParams = Record<string, string>;
 
 export function Form() {
   const [formData, setFormData] = useState({
@@ -10,6 +18,24 @@ export function Form() {
     agreedToTerms: true,
     honeypot: "", // антиспам поле
   });
+  const [utmParams, setUtmParams] = useState<UTMParams>({});
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const collected: UTMParams = {};
+
+    params.forEach((value, key) => {
+      if (key.toLowerCase().startsWith("utm")) {
+        collected[key] = value;
+      }
+    });
+
+    setUtmParams(collected);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,12 +59,22 @@ export function Form() {
             phone: formData.phone,
             agreedToTerms: formData.agreedToTerms,
             timestamp: new Date().toISOString(),
+            utm: utmParams,
           }),
         }
       );
 
       if (response.ok) {
         console.log("Форма успешно отправлена на вебхук");
+        if (typeof window !== "undefined") {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "lead_success",
+            formName: "contact_form",
+            utm: utmParams,
+          });
+          window.location.href = "https://lp.nextcollege.co.il/thank-you/";
+        }
         // Очищаем форму после успешной отправки
         setFormData({
           name: "",

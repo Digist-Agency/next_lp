@@ -12,7 +12,7 @@ export function WhyChooseUs() {
         <h2 className="text-[32px] lg:text-[64px] font-bold text-primary">
           למה לבחור בנו?
         </h2>
-        <h3 className="text-[16px] lg:text-[24px] font-normal text-white text-center">
+        <h3 className="text-[16px] lg:text-[20px] font-normal text-white text-center">
           קורסים פרקטיים, תמיכה אישית, ותוצאות <br />
           אמיתיות – זה מה שמייחד אותנו.
         </h3>

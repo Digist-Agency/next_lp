@@ -139,10 +139,10 @@ export function SuccessStorySlider() {
                             />
 
                             <div className="flex-1">
-                              <h4 className="text-[18px] lg:text-[24px] font-semibold text-black mb-2">
+                              <h4 className="text-[18px] lg:text-[20px] font-semibold text-black mb-2">
                                 {section.title}
                               </h4>
-                              <p className="text-[14px] lg:text-[20px] text-black leading-relaxed">
+                              <p className="text-[14px] lg:text-[18px] text-black leading-relaxed">
                                 {section.description}
                               </p>
                             </div>
@@ -197,7 +197,7 @@ export function SuccessStorySlider() {
                         width={120}
                         height={140}
                       />
-                      <p className="text-black text-[16px] lg:text-[20px] font-semibold">
+                      <p className="text-black text-[16px] lg:text-[18px] font-semibold">
                         תעודה עם סיום
                         <br /> ההכשרה
                       </p>
