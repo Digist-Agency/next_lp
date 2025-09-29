@@ -43,7 +43,7 @@ export function HeroSection() {
           <Rating />
         </div>
 
-        <FormContainer id="contact-form" style="margin-top: 10px;">
+        <FormContainer id="contact-form">
           <Form />
         </FormContainer>
       </div>
