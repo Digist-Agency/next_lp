@@ -4,7 +4,7 @@ import { TeachersSlider } from "./teachers_slider";
 
 export function OurTeachers() {
   return (
-    <section id="our-teachers" className="min-h-screen our-teachers-bg">
+    <section id="our-teachers" className="min-h-screen our-teachers-bg mb-[-10px]">
       <div className="min-h-screen flex flex-col mx-auto w-full items-center justify-end pt-10 lg:pt-20">
         <div className="flex-1 flex items-end">
           <TeachersSlider />
