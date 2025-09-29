@@ -9,7 +9,7 @@ export function SuccessStory() {
       <div className="min-h-screen flex flex-col mx-auto w-full items-center justify-between py-10 lg:py-20">
         <div className="text-center mb-4">
           <h2 className="text-[32px] lg:text-[64px] font-bold text-black mb-2">
-            סיפורי הצלחה
+            בוגרים ממליצים
           </h2>
         </div>
         <div className="flex-1 flex items-center w-full">
