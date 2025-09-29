@@ -5,7 +5,7 @@ export function Footer() {
         ©2025 Next college. All right Reserved.
       </p>
       <p>
-      <a href="https://lp.nextcollege.co.il/privacy-policy/" target="_blank">מדיניות פרטיות - נקסט קולג'
+      <a href="https://lp.nextcollege.co.il/privacy-policy/" target="_blank">מדיניות פרטיות
 </a>
       </p>
     </div>
