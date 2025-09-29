@@ -10,7 +10,7 @@ export function VideoReviews() {
       <div className="min-h-[80vh] flex flex-col mx-auto w-full justify-between items-center max-w-[1300px]">
         <div className="text-center mb-4 pt-10 lg:pt-20">
           <h2 className="text-[32px] lg:text-[64px] font-bold text-black mb-2">
-            וידאו ביקורות לקוחות
+בוגרים ממליצים
           </h2>
         </div>
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4">
