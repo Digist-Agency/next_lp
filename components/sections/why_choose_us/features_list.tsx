@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: "פוטנציאל שכר גבוה כבר מהיום הראשון",
-    description: "לפי טבלאות השכר ברשת מדובר בשכר התחלתי של 9,000-12,000 ₪.",
+    description: "לפי טבלאות השכר ברשת מדובר בשכר התחלתי של 9,000-15,000 ₪.",
     icon: (
       <Image
         src="/icons/why_choose_us/businessplan.svg"
