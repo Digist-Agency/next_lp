@@ -198,8 +198,8 @@ export function SuccessStorySlider() {
                         height={140}
                       />
                       <p className="text-black text-[16px] lg:text-[18px] font-semibold">
-                        תעודה עם סיום
-                        <br /> ההכשרה
+                     <br> תעודת הסמכה מוכרת של
+לשכת רואי החשבון בישראל.
                       </p>
                     </div>
 
