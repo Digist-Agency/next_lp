@@ -19,7 +19,7 @@ const successStoriesData = [
     owner: {
       icon: "/icons/success_story/avatar.svg",
       title: "דנה לוי",
-      description: "רואה חשבון ראשי של חברת ורשינה",
+      description: "מנהלת חשבון",
     },
     sections: [
       {
@@ -32,7 +32,7 @@ const successStoriesData = [
       {
         id: 2,
         icon: "/icons/success_story/question-mark.svg",
-        title: "איך בניתי רצתי ללמוד",
+        title: "תהליך הלמידה",
         description:
           "לא היה לי ידע מוקדם והיה לי חשש מהמקצוע, אבל המדריכים הסבירו בסבלנות והיו זמינים לשאלות. התמדתי בתרגולים, התייעצתי עם חברי הקבוצה והרגשתי שיפור מיום ליום. התחלתי להאמין בעצמי שהתחום הזה מתאים לי.",
       },
@@ -49,9 +49,9 @@ const successStoriesData = [
     id: 2,
     image: "/images/success_story/tel2.webp",
     owner: {
-      icon: "/icons/success_story/avatar.svg",
+      icon: "/icons/success_story/avatar2.svg",
       title: "אלכס גורביץ'",
-      description: "רואה חשבון ראשי של חברת ורשינה",
+      description: "מנהל חשבונות וחשב שכר",
     },
     sections: [
       {
@@ -64,7 +64,7 @@ const successStoriesData = [
       {
         id: 2,
         icon: "/icons/success_story/circle-check.svg",
-        title: "איך בניתי רצתי ללמוד",
+        title: "תהליך הלמידה",
         description:
           "בהתחלה היה לי קשה עם החומר, אבל עם הזמן והסיוע של צוות ההוראה והמפגשים בזום, הצלחתי להבין נושאים מסובכים. לא ויתרתי והקדשתי זמן לתרגול בבית.",
       },
