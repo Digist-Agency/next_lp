@@ -198,9 +198,9 @@ export function SuccessStorySlider() {
                         height={140}
                       />
                       <p className="text-black text-[16px] lg:text-[18px] font-semibold">
-                     <br> תעודת הסמכה מוכרת של
-לשכת רואי החשבון בישראל.
+                        <br /> תעודת הסמכה מוכרת של לשכת רואי החשבון בישראל.
                       </p>
+
                     </div>
 
                     <GoldButton
