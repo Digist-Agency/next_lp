@@ -21,7 +21,7 @@ const videoReviewsData = [
       <>
         פוטנציאל שכר
         <br />
-        9K-12K
+        9K-15K
       </>
     ),
     icon: "/icons/video_reviews/briefcase.svg",
