@@ -6,7 +6,7 @@ export function RatingDesc() {
         התחייבות להצלחה או החזר כספי מלא
       </p>
       <p className=" text-[18px] md:text-[20px] font-bold text-accent text-center lg:text-right">
-        שכר ממוצע - 9,000-12,000
+        שכר ממוצע - 9,000-15,000
       </p>
     </div>
   );
