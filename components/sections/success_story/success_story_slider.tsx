@@ -19,7 +19,7 @@ const successStoriesData = [
     owner: {
       icon: "/icons/success_story/avatar.svg",
       title: "דנה לוי",
-      description: "מנהלת חשבון",
+      description: "מנהלת חשבונות",
     },
     sections: [
       {
@@ -41,7 +41,7 @@ const successStoriesData = [
         icon: "/icons/success_story/circle-check.svg",
         title: "תוצאות הלימודים",
         description:
-          "הקורס נתן לי כלים מעשיים, ולאחר סיום הלימודים מצאתי עבודה במשרד רואי חשבון קטן. היום אני קם כל בוקר עם תחושת סיפוק וביטחון לעתיד.",
+          "הקורס נתן לי כלים מעשיים, ולאחר סיום הלימודים מצאתי עבודה במשרד רואי חשבון קטן. היום אני קמה כל בוקר עם תחושת סיפוק וביטחון לעתיד.",
       },
     ],
   },
