@@ -19,6 +19,7 @@ export function HeroSection() {
             <br />
             וחשבות שכר אונליין
           </h1>
+          <h2 class=" text-[28px] md:text-[32px] font-bold text-accent text-center">התחייבות ל 100% הצלחה</h2>
         </div>
 
         <Image
