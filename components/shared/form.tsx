@@ -202,14 +202,10 @@ export function Form() {
           לשיחת ייעוץ ללא התחייבות
         </GoldButton>
 
-        <span className="text-[16px] font-[600] text-black text-center">
-          המנהל שלנו יצור איתך קשר תוך 10 דקות.
-        </span>
       </div>
 
       {/* DESKTOP: bottom text and checkbox */}
-      <div className="hidden lg:flex flex-row-reverse justify-between items-center text-[16px] font-[600] text-black">
-        <span>המנהל שלנו יצור איתך קשר תוך 10 דקות.</span>
+      <div className="hidden lg:flex flex-row-reverse justify-end items-center text-[16px] font-[600] text-black">
         <label className="flex flex-row items-start gap-2 cursor-pointer text-[14px] font-[400]" dir="rtl">
           <input
             type="checkbox"
