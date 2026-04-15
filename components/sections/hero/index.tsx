@@ -9,9 +9,9 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-black bg-[url('/images/hero/mobile_bg.webp')] lg:bg-[url('/images/hero/bg.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-black bg-[url('/images/hero/mobile_bg.webp')] lg:bg-[url('/images/hero/bg.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden w-full max-w-full"
     >
-      <div className="min-h-screen mx-auto pt-5 lg:pt-10 relative z-10 h-full flex flex-col justify-between items-center max-w-[1200px]">
+      <div className="min-h-screen w-full mx-auto pt-5 lg:pt-10 relative z-10 h-full flex flex-col justify-between items-center max-w-[1200px] px-4 lg:px-6 box-border">
         <Header />
         <div className="space-y-4 py-10">
           <h1 className="font-arimo text-[32px] md:text-[64px] lg:text-[80px] leading-tight text-primary text-center font-bold ">
@@ -28,13 +28,7 @@ export function HeroSection() {
           width={500}
           height={100}
           priority
-          className="w-auto h-auto"
-          style={{
-            width: "500px",
-            height: "100px",
-            maxWidth: "500px",
-            maxHeight: "100px",
-          }}
+          className="w-[300px] h-auto lg:w-[500px] lg:h-[100px] lg:max-w-[500px] lg:max-h-[100px]"
         />
 
         <div className="flex gap-2 lg:gap-6  flex-col-reverse items-center lg:flex-row-reverse lg:justify-between lg:items-center">

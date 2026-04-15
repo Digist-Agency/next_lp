@@ -43,7 +43,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${birzia.variable} ${lunasima.variable} antialiased`}>
+      <body className={`${birzia.variable} ${lunasima.variable} antialiased overflow-x-hidden`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
