@@ -15,7 +15,7 @@ export function Form() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    agreedToTerms: true,
+    agreedToTerms: false,
     honeypot: "", // антиспам поле
   });
   const [utmParams, setUtmParams] = useState<UTMParams>({});
@@ -173,19 +173,25 @@ export function Form() {
           required
         />
 
-        <label className="flex flex-row items-center gap-2 text-[16px] font-[600] text-black cursor-pointer">
+        <label className="flex flex-row items-start gap-2 text-[14px] font-[400] text-black cursor-pointer" dir="rtl">
           <input
             type="checkbox"
             name="agreedToTerms"
             checked={formData.agreedToTerms}
             onChange={handleInputChange}
             required
-            className="w-4 h-4 appearance-none border-2 border-black bg-white 
+            className="mt-1 w-4 h-4 shrink-0 appearance-none border-2 border-black bg-white
   checked:bg-yellow-400 checked:border-black focus:outline-none
-  checked:before:content-['✓'] checked:before:block checked:before:text-black 
+  checked:before:content-['✓'] checked:before:block checked:before:text-black
   checked:before:text-[14px] checked:before:leading-4 checked:before:text-center"
           />
-          בהרשמתך הינך מסכימ/ה עם מדיניות הפרטיות של האתר
+          <span>
+            בהרשמתך הינך מסכימ/ה עם{" "}
+            <a href="https://nextcollege.co.il/privacy-policy/" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+              מדיניות הפרטיות של האתר
+            </a>
+            . אני מאשר/ת קבלת מידע שיווקי באמצעות דיוור במייל, בטלפון ו/או SMS /WHATSAPP וניתן להסיר את הסכמתי בכל עת.
+          </span>
         </label>
 
         <GoldButton
@@ -204,19 +210,25 @@ export function Form() {
       {/* DESKTOP: bottom text and checkbox */}
       <div className="hidden lg:flex flex-row-reverse justify-between items-center text-[16px] font-[600] text-black">
         <span>המנהל שלנו יצור איתך קשר תוך 10 דקות.</span>
-        <label className="flex flex-row items-center gap-2 cursor-pointer">
+        <label className="flex flex-row items-start gap-2 cursor-pointer text-[14px] font-[400]" dir="rtl">
           <input
             type="checkbox"
             name="agreedToTerms"
             checked={formData.agreedToTerms}
             onChange={handleInputChange}
             required
-            className="w-4 h-4 appearance-none border-2 border-black bg-white 
+            className="mt-1 w-4 h-4 shrink-0 appearance-none border-2 border-black bg-white
   checked:bg-yellow-400 checked:border-black focus:outline-none
-  checked:before:content-['✓'] checked:before:block checked:before:text-black 
+  checked:before:content-['✓'] checked:before:block checked:before:text-black
   checked:before:text-[14px] checked:before:leading-4 checked:before:text-center"
           />
-          בהרשמתך הינך מסכימ/ה עם מדיניות הפרטיות של האתר
+          <span>
+            בהרשמתך הינך מסכימ/ה עם{" "}
+            <a href="https://nextcollege.co.il/privacy-policy/" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+              מדיניות הפרטיות של האתר
+            </a>
+            . אני מאשר/ת קבלת מידע שיווקי באמצעות דיוור במייל, בטלפון ו/או SMS /WHATSAPP וניתן להסיר את הסכמתי בכל עת.
+          </span>
         </label>
       </div>
     </form>

@@ -1,4 +1,5 @@
 import { Footer } from "@/components/footer";
+import { ConsentBanner } from "@/components/shared/consent_banner";
 import AccessibilityWidgetClient from "@/components/sections/AccessibilityWidgetClient";
 import { HeroSection } from "@/components/sections/hero";
 import dynamic from "next/dynamic";
@@ -66,6 +67,7 @@ export default function Home() {
         <Footer />
       </main>
       <AccessibilityWidgetClient />
+      <ConsentBanner />
     </>
   );
 }
