@@ -10,42 +10,35 @@ import Image from "next/image";
 const teachersData = [
   {
     id: 1,
+    hidden: false,
     description: (
       <>
-        בעל תואר ראשון (BA) בחשבונאות עם חטיבה בכלכלה מהאוניברסיטה הפתוחה
-        ואוניברסיטת בן-גוריון. מרצה בכיר עם ניסיון של מעל 15 שנים בהוראה והכשרת
-        מאות תלמידים בתחום החשבונאות, הנהלת חשבונות וייעוץ מס.
+        מאחורי הקורס עומד מי שמביא איתו ניסיון אמיתי מהשטח — לא רק תיאוריה.
       </>
     ),
     fullDescription: (
       <>
-        לאורך הקריירה שימש כרואה חשבון מבקר במשרדי רואי חשבון מובילים, והעביר
-        שיעורים פרונטליים והכשרות מקצועיות במסגרות שונות.
+        רו&quot;ח ניסים שושן, המנהל האקדמי של התוכנית, הוא רואה חשבון משנת
+        1985, עם ניסיון של למעלה מ־35 שנה בעולם הפיננסי. במהלך השנים ניהל
+        משרד רואי חשבון, ליווה חברות ועצמאים, ייצג מול רשויות המס והכשיר
+        דורות של אנשי מקצוע בתחום הנהלת החשבונות והשכר.
         <br />
         <br />
-        אבי מתמחה בהוראת הנהלת חשבונות סוגים 1, 2, 3, חשבות שכר וחשבונאות ליועצי
-        מס, ובעל ניסיון רב בליווי תלמידים להצלחה בבחינות ההסמכה הממלכתיות.
-        <br />
-        <br />
-        אבי נחשב לאחד המרצים המובילים והאהובים בארץ, בזכות שילוב של מקצועיות
-        גבוהה, ידע עדכני והבנה עמוקה של עולם החשבונאות בישראל.
+        הקורס נבנה מתוך ניסיון מצטבר של שנים — כדי לתת לכם לא רק ידע, אלא
+        הבנה עמוקה של עולם השכר כפי שהוא מתנהל בפועל.
       </>
     ),
-    quote: (
-      <>
-        השליחות שלי היא לא רק ללמד – אלא להעניק לכם כלים אמיתיים וביטחון להצליח
-        בעולם האמיתי
-      </>
-    ),
-    image: "/images/our_teachers/teacher_1.webp",
+    quote: null,
+    image: "/images/our_teachers/teacher_1.png",
     sticker: {
-      text: "אבי טוהר",
-      description: "בכיר בתחום החשבונאות",
+      text: 'רו"ח ניסים שושן',
+      description: "מנהל אקדמי",
       icon: "/icons/our_teachers/avatar_teacher_1.svg",
     },
   },
   {
     id: 2,
+    hidden: true,
     description: (
       <>
         בעלת תואר ראשון במנהל עסקים עם התמחות במימון ומערכות מידע, ורואת חשבון
@@ -81,18 +74,22 @@ const teachersData = [
   },
 ];
 
+const visibleTeachers = teachersData.filter((t) => !t.hidden);
+
 export function TeachersSlider() {
+  const showNav = visibleTeachers.length > 1;
+
   return (
     <div className="w-full max-w-8xl mx-auto px-4">
       <Carousel
         className="w-full"
         opts={{
           align: "start",
-          loop: true,
+          loop: showNav,
         }}
       >
         <CarouselContent className="items-end">
-          {teachersData.map((teacher) => (
+          {visibleTeachers.map((teacher) => (
             <CarouselItem key={teacher.id}>
               <div className="flex flex-col-reverse  items-center lg:items-end lg:grid lg:grid-cols-2 gap-20 min-h-[600px] relative">
                 {/* Изображение справа (в RTL первый элемент) */}
@@ -107,32 +104,29 @@ export function TeachersSlider() {
                     />
 
                     {/* Кнопки навигации поверх картинки */}
-                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 text-primary border-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full">
-                      <Image
-                        src="/icons/our_teachers/arrow_left.svg"
-                        alt="arrow-left"
-                        width={50}
-                        height={50}
-                      />
-                    </CarouselPrevious>
-                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 text-primary border-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full">
-                      <Image
-                        src="/icons/our_teachers/arrow_right.svg"
-                        alt="arrow-right"
-                        width={50}
-                        height={50}
-                      />
-                    </CarouselNext>
+                    {showNav && (
+                      <>
+                        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 text-primary border-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full">
+                          <Image
+                            src="/icons/our_teachers/arrow_left.svg"
+                            alt="arrow-left"
+                            width={50}
+                            height={50}
+                          />
+                        </CarouselPrevious>
+                        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 text-primary border-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full">
+                          <Image
+                            src="/icons/our_teachers/arrow_right.svg"
+                            alt="arrow-right"
+                            width={50}
+                            height={50}
+                          />
+                        </CarouselNext>
+                      </>
+                    )}
 
                     {/* Стикер поверх картинки */}
                     <div className="flex flex-row items-center justify-center gap-4 absolute bottom-4 right-4">
-                      <Image
-                        src={teacher.sticker.icon}
-                        alt="sticker"
-                        width={48}
-                        height={48}
-                        className="w-[42px] h-[42px] lg:w-[48px] lg:h-[48px]"
-                      />
                       <div className="flex flex-col items-start justify-center">
                         <div className="flex flex-row items-center justify-center gap-4">
                           <p className="text-[16px] md:text-[18px] font-bold text-white leading-relaxed">
@@ -157,7 +151,7 @@ export function TeachersSlider() {
                 <div className="space-y-6 px-4 md:px-8 lg:px-0 text-center lg:text-right flex flex-col  justify-start w-full max-w-[full]  lg:max-w-[700px] lg:mb-10">
                   <div>
                     <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold text-primary mb-2">
-                      המרצים שלנו
+                      אודות המרצה
                     </h1>
                   </div>
 
@@ -169,11 +163,13 @@ export function TeachersSlider() {
                     {teacher.fullDescription}
                   </p>
 
-                  <div className="bg-accent text-black p-4 lg:p-8 max-w-[full]">
-                    <p className="text-[18px] lg:text-[23px]  font-semibold text-right">
-                      {teacher.quote}
-                    </p>
-                  </div>
+                  {teacher.quote && (
+                    <div className="bg-accent text-black p-4 lg:p-8 max-w-[full]">
+                      <p className="text-[18px] lg:text-[23px]  font-semibold text-right">
+                        {teacher.quote}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </CarouselItem>
