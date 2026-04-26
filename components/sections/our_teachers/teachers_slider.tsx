@@ -32,7 +32,7 @@ const teachersData = [
     image: "/images/our_teachers/teacher_1.png",
     sticker: {
       text: 'רו"ח ניסים שושן',
-      description: "מנהל אקדמי",
+      description: "בכיר בתחום החשבונאות",
       icon: "/icons/our_teachers/avatar_teacher_1.svg",
     },
   },
@@ -148,7 +148,7 @@ export function TeachersSlider() {
                 </div>
 
                 {/* Текст слева (в RTL второй элемент) */}
-                <div className="space-y-6 px-4 md:px-8 lg:px-0 text-center lg:text-right flex flex-col  justify-start w-full max-w-[full]  lg:max-w-[700px] lg:mb-10">
+                <div className="space-y-6 px-4 md:px-8 lg:px-0 text-center lg:text-right flex flex-col  justify-start w-full max-w-[full]  lg:max-w-[700px] lg:mb-10 lg:-translate-y-[20%]">
                   <div>
                     <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold text-primary mb-2">
                       אודות המרצה
